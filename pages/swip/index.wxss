@@ -1,0 +1,4 @@
+/* pages/swip/index.wxss */
+.inner {
+  color: red;
+}

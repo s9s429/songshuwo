@@ -1,0 +1,208 @@
+<view>
+  <!-- 头部固定栏 -->
+  <view class="header">
+    <!-- 信息 -->
+    <view class="msg">
+      <view class="head">
+        <image class="headimg" src="../../images/cover.png"></image>
+      </view>
+      <view class="mes">
+        <view class="name">叽叽喳喳的松鼠<image class="sexicon" src="../../images/sex.png"></image>
+            <image class="lvicon" src="../../images/lv.png"></image>
+        </view>
+        <view class="yearvip">年度大会员</view>
+        <view class="icon">B币：5.0 硬币：514</view>
+      </view>
+      <view class="zone">空间</view>
+    </view>
+    <view class="clear"></view>
+    <!-- 关注 -->
+    <view class="subList">
+      <view class="item">
+        <view class="zhu">52</view>
+        <view class="fu">动态</view>
+      </view>
+      <view class="line"></view>
+      <view class="item">
+        <view class="zhu">77</view>
+        <view class="fu">关注</view>
+      </view>
+      <view class="line"></view>
+      <view class="item">
+        <view class="zhu">7</view>
+        <view class="fu">粉丝</view>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <!-- 番剧 -->
+    <view class="pinkArea">
+      <view class="leftet">
+        <view class="fir">我的大会员</view>
+        <view class="twi">番剧国创抢先看</view>
+      </view>
+      <view class="righttet">
+        <text class="goArea"></text>
+      </view>
+    </view>
+
+  </view>
+  <!-- 内容 -->
+  <view class="body" style="height: {{screenHei}};">
+    <scroll-view class="scview" scroll-y="true">
+      <!--  -->
+      <view class="fourbtn">
+        <view class="item">
+          <image class="img" src="../../images/icon21.png"></image>
+          <view class="tet">离线缓存</view>
+        </view>
+        <view class="item">
+          <image class="img" src="../../images/icon22.png"></image>
+          <view class="tet">历史记录</view>
+        </view>
+        <view class="item">
+          <image class="img" src="../../images/icon23.png"></image>
+          <view class="tet">我的收藏</view>
+        </view>
+        <view class="item">
+          <image class="img" src="../../images/icon24.png"></image>
+          <view class="tet">稍后再看</view>
+        </view>
+      </view>
+      <view class="clear"></view>
+      <!-- 创作中心 -->
+      <view class="creation creation2">
+        <view class="top">
+          <view class="tit">创作中心</view>
+          <view class="upbtn"><image class="img" src="../../images/icon30.png"></image>发布</view>
+        </view>
+        <view class="clear"></view>
+        <view class="list">
+          <view class="item">
+            <image class="img" src="../../images/icon31.png"></image>
+            <view class="tet">创作首页</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon32.png"></image>
+            <view class="tet">稿件管理</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon33.png"></image>
+            <view class="tet">打卡挑战</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon34.png"></image>
+            <view class="tet">有奖活动</view>
+          </view>
+        </view>
+      </view>
+      <view class="clear"></view>
+      <!-- 直播中心 -->
+      <view class="creation">
+        <view class="top">
+          <view class="tit">直播中心</view>
+          <view class="upbtn upbtn2"><image class="img" src="../../images/icon40.png"></image>开播</view>
+        </view>
+        <view class="clear"></view>
+        <view class="list">
+          <view class="item">
+            <image class="img" src="../../images/icon41.png"></image>
+            <view class="tet">主播中心</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon42.png"></image>
+            <view class="tet">主播活动</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon43.png"></image>
+            <view class="tet">直播数据</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon44.png"></image>
+            <view class="tet">我的直播</view>
+          </view>
+        </view>
+      </view>
+      <view class="clear"></view>
+      <!-- 推荐服务 -->
+      <view class="creation">
+        <view class="top">
+          <view class="tit">推荐服务</view>
+        </view>
+        <view class="clear"></view>
+        <view class="list">
+          <view class="item">
+            <image class="img" src="../../images/icon51.png"></image>
+            <view class="tet">我的课程</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon52.png"></image>
+            <view class="tet">看视频免流量</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon53.png"></image>
+            <view class="tet">个性装扮</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon54.png"></image>
+            <view class="tet">邀好友赚红包</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon55.png"></image>
+            <view class="tet">我的钱包</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon56.png"></image>
+            <view class="tet">游戏中心</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon57.png"></image>
+            <view class="tet">会员购中心</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon58.png"></image>
+            <view class="tet">推荐有奖</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon59.png"></image>
+            <view class="tet">反馈论坛</view>
+          </view>
+          <view class="item">
+            <image class="img" src="../../images/icon60.png"></image>
+            <view class="tet">充能领福利</view>
+          </view>
+        </view>
+      </view>
+      <view class="clear"></view>
+      <!-- 更多服务 -->
+      <view class="moreSer">
+        <view class="top">
+          <view class="tit">更多服务</view>
+        </view>
+        <view class="listt">
+          <view class="itemm">
+            <view class="left">
+              <image class="img" src="../../images/icon61.png"></image>联系客服</view>
+            <view class="right"></view>
+          </view>
+          <view class="itemm">
+            <view class="left">
+              <image class="img" src="../../images/icon62.png"></image>课堂模式</view>
+            <view class="right"></view>
+          </view>
+          <view class="itemm">
+            <view class="left">
+              <image class="img" src="../../images/icon63.png"></image>青少年模式</view>
+            <view class="right"></view>
+          </view>
+          <view class="itemm">
+            <view class="left">
+              <image class="img" src="../../images/icon64.png"></image>设置</view>
+            <view class="right"></view>
+          </view>
+        </view>
+      </view>
+
+    </scroll-view>
+
+  </view>
+</view>

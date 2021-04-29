@@ -1,0 +1,41 @@
+<view class="recommended">
+    <!-- 上拉刷新显示的视频列表 -->
+    <view class="videoList">
+      <block wx:for="{{topVideoList}}" wx:key="index">
+        <!-- 盒子start -->
+        <MsgBox item="{{item}}"></MsgBox>
+        <!-- 盒子end -->
+      </block>
+    </view>
+    <!-- 开局轮播图 -->
+    <swiper 
+      class="recoSwiper" 
+      indicator-dots="true"
+      indicator-color="rgb(190,190,190)"
+      indicator-active-color="#fff"
+      autoplay="true"
+      >
+      <swiper-item wx:for="{{imgList}}" wx:key="index">
+        <image class="swpImg" src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+    <!-- 小图文提示框 -->
+    <view class="aniDia">
+      <view class="aniDiaCon">
+        <image class="aniDiaConImg" src="{{newAnimation.img}}"></image>
+      </view>
+      <view class="aniDiaRight">
+        <text class="aniDiaTxt1">{{newAnimation.title}}</text>
+        <text class="aniDiaTxt2">{{newAnimation.name + " " + newAnimation.page}}</text>
+      </view>
+    </view>
+    <!-- 视频列表 -->
+    <view class="videoList">
+      <block wx:for="{{videoList}}" wx:key="index">
+        <!-- 盒子start -->
+        <MsgBox item="{{item}}"></MsgBox>
+        <!-- 盒子end -->
+      </block>
+    </view>
+    <view wx:if="{{upLoadMsg.isShowLoad}}" class="bottomDataTip">{{upLoadMsg.title}}</view>
+</view>

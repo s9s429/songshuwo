@@ -1,0 +1,27 @@
+<view>
+  <!-- 盒子start -->
+  <view class="videoBox">
+    <view class="videoImgBox">
+      <navigator url="/pages/play/play">
+        <image lazy-load="true" class="imgBg" src="{{item.img}}"></image>
+      </navigator>
+      
+      <view class="videoMsg">
+        <image class="videoIcon" src="../../../images/play.png"></image>
+        <text class="videoText">{{item.play}}</text>
+        <block wx:if="{{item.showComments}}">
+          <image class="videoIcon" src="../../../images/comments.png"></image>
+          <text class="videoText">{{item.comments}}</text>
+        </block>
+        <block wx:else="{{!item.showComments}}">
+          <image class="videoIcon" src="../../../images/praise.png"></image>
+          <text class="videoText">{{item.praise}}</text>
+        </block>
+        <text wx:if="{{item.showTime}}" class="videoTime">{{item.time}}</text>
+      </view>
+    </view>
+    <view class="videoTitle">{{item.title}}</view>
+    <view class="videoAthu">{{item.author}}</view>
+  </view>
+  <!-- 盒子end -->
+</view>

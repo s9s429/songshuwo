@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "component-tag-name": "/pages/swip/index"
+  },
+  "enablePullDownRefresh": true,
+  "component": true,
+  "navigationBarTitleText": "我现在是频道"
+}

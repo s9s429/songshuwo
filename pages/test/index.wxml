@@ -1,0 +1,56 @@
+<!--pages/test/index.wxml-->
+<view>
+  <!-- <text>这里是测试页面</text> -->
+  <include src="/pages/header/index.wxml"></include>
+
+  <view>glodata中的名字：{{userInfo}}</view>
+  <button bindtap="cha">修改golbData的数据</button>
+
+  <image class="testImg" src="../../images/liverCover02.jpg"></image>
+  <button type="primary" bindtap="saveImageFile">保存图片</button>
+  
+  <!-- 自定义组件 -->
+  <component-tag-name inner-text="{{innerText}}"></component-tag-name>
+
+  <button type="primary" bindtap="testNavig4">bian</button>
+
+  <view class="animation-element-wrapper">
+    <view class="animation-element" animation="{{animation}}"></view>
+  </view>
+
+  <button type="primary" bindtap="testNavig3">bian</button>
+  
+  <block wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemN" wx:key="id">
+    <view>名字：{{itemN.name}}</view>
+    <view>年龄：{{itemN.age}}</view>
+    <view>编号：{{itemN.id}}</view>
+  </block>
+  <open-data type="userNickName"></open-data>
+  <button hover-class="hover" bindtap="addName">加入新名字</button>
+  <button loading="true" hover-class="hover" bindtap="changeName">修改xiaoming的名字</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <button type="primary" bindtap="testNavig">测试按钮</button>
+  <button type="warn" bindtap="testNavig2">测试按钮2</button>
+  <view id="yui">到这里来</view>
+</view>

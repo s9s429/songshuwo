@@ -1,0 +1,2 @@
+<!--pages/header/index.wxml-->
+<text>我是引入的头部文件</text>

@@ -1,0 +1,228 @@
+.live {
+  width: 700rpx;
+  margin: 20rpx auto;
+}
+.recoSwiper {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.recoSwiper .swpImg {
+  width: 100%;
+  height: 220rpx;
+}
+.liveType {
+  width: 700rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.liveType .typeBox {
+  width: 20%;
+  text-align: center;
+  margin: 20rpx 0;
+}
+.liveType .typeImg {
+  width: 110rpx;
+  height: 110rpx;
+}
+.liveType .typeName {
+  font-size: 26rpx;
+  text-align: center;
+}
+.followTip {
+  width: 700rpx;
+  height: 290rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  margin: 20rpx 0;
+}
+.followTip .topTit {
+  padding: 20rpx 20rpx;
+}
+.followTip .topTit .tit {
+  font-size: 26rpx;
+  color: #000000;
+}
+.followTip .topTit .followNum {
+  font-size: 26rpx;
+  color: #ff6999;
+  margin: 0 0 0 10rpx;
+}
+.followTip .topTit .titPs {
+  font-size: 26rpx;
+  color: #adadad;
+}
+.followTip .topTit .minIcon {
+  width: 30rpx;
+  height: 30rpx;
+  display: initial-block;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  margin-bottom: 6rpx;
+}
+.followTip .topTit .checkAll {
+  font-size: 26rpx;
+  color: #adadad;
+  float: right;
+  margin-right: 35rpx;
+}
+.followTip .topTit .checkAll::after {
+  content: "";
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 1rpx solid #adadad;
+  border-right: 1rpx solid #adadad;
+  border-bottom: 1rpx solid transparent;
+  border-left: 1rpx solid transparent;
+  position: absolute;
+  margin-top: 8rpx;
+  transform: rotate(45deg);
+}
+.followTip .followMsg {
+  width: 660rpx;
+  height: 180rpx;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  box-sizing: content-box;
+  border: 1px solid #ebebeb;
+}
+.followTip .followMsg .msgCover {
+  width: 310rpx;
+  height: 180rpx;
+  float: left;
+}
+.followMsg .upMsg {
+  float: left;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+.followMsg .upMsg .upHead {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.followMsg .upMsg .room {
+  float: left;
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  width: 220rpx;
+}
+.followMsg .upMsg .room .upName {
+  font-size: 24rpx;
+  width: 220rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.followMsg .upMsg .room .upTie {
+  font-size: 24rpx;
+  color: #adadad;
+  width: 220rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.recomLiveTit {
+  width: 700rpx;
+  margin: 20rpx auto;
+}
+.recomLiveTit .titIcon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+  margin-bottom: 2rpx;
+}
+.recomLiveTit .titName {
+  font-size: 26rpx;
+  color: #000000;
+  margin-left: 15rpx;
+}
+.videoBox {
+  width: 340rpx;
+  border-radius: 15rpx 15rpx 0 0;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.videoBox .videoImgBox {
+  width: 340rpx;
+  position: relative;
+}
+.videoBox .videoImgBox .imgBg {
+  width: 340rpx;
+  height: 200rpx;
+}
+.videoBox .videoTitle {
+  font-size: 26rpx;
+  text-align: justify;
+  margin: 10rpx 20rpx;
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.videoBox .videoAthu {
+  font-size: 22rpx;
+  color: #b1b1b1;
+  margin: 10rpx 20rpx;
+}
+.videoBox .videoImgBox .videoMsg {
+  position: absolute;
+  bottom: 15rpx;
+  left: 0rpx;
+  width: 340rpx;
+}
+.videoBox .videoImgBox .videoMsg .videoIcon {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 15rpx;
+  vertical-align: middle;
+}
+.lookNum {
+  float: right;
+}
+.videoBox .videoImgBox .videoMsg .liverName {
+  font-size: 22rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-top: 10rpx;
+  color: #ffffff;
+  width: 160rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+.videoBox .videoImgBox .videoMsg .videoText {
+  font-size: 20rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  color: #ffffff;
+}
+.liveList {
+  margin: 20rpx auto;
+  width: 700rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bottomDataTip {
+  margin: 0 20rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.zhanwei {
+  width: 700rpx;
+  height: 50rpx;
+  margin: 20rpx 0;
+}

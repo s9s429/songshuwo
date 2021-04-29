@@ -1,0 +1,11 @@
+.con {
+  width: 100%;
+  margin: 20rpx auto;
+}
+.con .item {
+  float: left;
+}
+.con .item .img {
+  width: 150rpx;
+  height: 150rpx;
+}

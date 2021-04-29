@@ -1,0 +1,51 @@
+.videoBox {
+  width: 340rpx;
+  border-radius: 15rpx 15rpx 0 0;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.videoBox .videoImgBox {
+  width: 340rpx;
+  position: relative;
+}
+.videoBox .videoImgBox .imgBg {
+  width: 340rpx;
+  height: 240rpx;
+}
+.videoBox .videoTitle {
+  font-size: 26rpx;
+  text-align: justify;
+  margin: 10rpx 20rpx;
+  height: 70rpx;
+}
+.videoBox .videoAthu {
+  font-size: 22rpx;
+  color: #b1b1b1;
+  margin: 10rpx 20rpx;
+}
+.videoBox .videoImgBox .videoMsg {
+  position: absolute;
+  bottom: 15rpx;
+  left: 0rpx;
+  width: 340rpx;
+}
+.videoBox .videoImgBox .videoMsg .videoIcon {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 15rpx;
+  vertical-align: middle;
+}
+.videoBox .videoImgBox .videoMsg .videoText {
+  font-size: 20rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  color: #ffffff;
+}
+.videoBox .videoImgBox .videoMsg .videoTime {
+  font-size: 20rpx;
+  color: #ffffff;
+  position: absolute;
+  right: 15rpx;
+  bottom: 4rpx;
+}

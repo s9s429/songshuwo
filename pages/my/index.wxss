@@ -1,0 +1,269 @@
+
+.header {
+  width: 100%;
+  margin: 20rpx 0 0;
+  overflow: hidden;
+}
+.msg .head {
+  margin-left: 20rpx;
+  float: left;
+}
+.msg .head .headimg {
+  width: 150rpx;
+  height: 150rpx;
+}
+.msg .mes {
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+}
+.mes .name {
+  font-size: 28rpx;
+  color: #f17796;
+  font-weight: bold;
+  letter-spacing: 1rpx;
+}
+.sexicon {
+  width: 20rpx;
+  height: 23rpx;
+  margin-left: 10rpx;
+}
+.lvicon {
+  width: 45rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.yearvip {
+  background-color: #f17796;
+  color: #fff;
+  font-size: 20rpx;
+  border-right: 15rpx;
+  width: 130rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  letter-spacing: 1rpx;
+  border-radius: 8rpx;
+  margin: 10rpx 0;
+}
+.icon {
+  color: #b3b3b3;
+  font-size: 24rpx;
+}
+.zone {
+  float: right;
+  color: #b3b3b3;
+  font-size: 26rpx;
+  margin-top: 67rpx;
+  margin-right: 45rpx;
+}
+.zone::after {
+  content: "";
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transform: rotate(45deg);
+  margin-top: 10rpx;
+}
+.subList {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.subList .item {
+  float: left;
+  width: 249rpx;
+  text-align: center;
+  /* border-right: 1px solid #bebebe;
+  box-sizing: border-box; */
+}
+/* .subList .item:last-child {
+  border-right: none;
+} */
+.line {
+  float: left;
+  width: 1.5rpx;
+  height: 35rpx;
+  background-color: #e3e3e3;
+  margin-top: 20rpx;
+}
+.subList .item .zhu {
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+.subList .item .fu {
+  color: #b3b3b3;
+  font-size: 24rpx;
+}
+.clear {
+  clear: both;
+}
+.pinkArea {
+  width: 700rpx;
+  height: 110rpx;
+  margin: 20rpx auto 0;
+  background-color: #f17796;
+  border-radius: 15rpx 15rpx 0 0;
+  box-shadow: 0px -1px 20px rgba(241,119,150,.5);
+}
+.pinkArea .leftet {
+  float: left;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.pinkArea .leftet .fir {
+  color: #ffffff;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}
+.pinkArea .leftet .twi {
+  color: #fff;
+  font-size: 22rpx;
+  letter-spacing: 2rpx;
+  margin-top: 10rpx;
+}
+.pinkArea .righttet .goArea {
+  width: 60rpx;
+  height: 110rpx;
+  float: right;
+}
+.pinkArea .righttet .goArea::after {
+  content: "";
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transform: rotate(45deg);
+  margin-top: 45rpx;
+}
+.body {
+  width: 100%;
+}
+.fourbtn {
+  margin-top: 30rpx;
+}
+.fourbtn .item {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.fourbtn .item .img {
+  width: 50rpx;
+  height: 50rpx;
+}
+.fourbtn .item .tet {
+  font-size: 26rpx;
+}
+.scview {
+  width: 100%;
+  height: 100%;
+}
+.creation {
+  width: 750rpx;
+  /* margin: 40rpx 0 0; */
+}
+.creation2 {
+  margin-top: 40rpx;
+}
+.creation .top {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.creation .top .tit {
+  font-size: 28rpx;
+  font-weight: bold;
+  float: left;
+} 
+.creation .top .upbtn {
+  float: right;
+  background-color: #f17796;
+  width: 120rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  border-radius: 25rpx;
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+}
+.creation .top .upbtn2 {
+  background-color: #feeaee;
+  color: #e97fa0;
+}
+.creation .top .upbtn .img {
+  width: 25rpx;
+  height: 25rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.list {
+  clear: both;
+  margin-top: 30rpx;
+}
+.list .item {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.list .item .img {
+  width: 50rpx;
+  height: 50rpx;
+}
+.list .item .tet {
+  font-size: 26rpx;
+}
+.moreSer {
+  width: 750rpx;
+  /* margin: 0; */
+}
+.moreSer .top {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.moreSer .top .tit {
+  font-size: 28rpx;
+  font-weight: bold;
+} 
+.moreSer .listt .itemm {
+  margin-left: 20rpx;
+  clear: both;
+}
+.moreSer .listt .itemm .left {
+  font-size: 26rpx;
+  float: left;
+  margin-top: 30rpx;
+  margin-bottom: 0rpx;
+}
+.moreSer .listt .itemm:last-child .left {
+  margin-bottom: 30rpx;
+}
+.moreSer .listt .itemm .left .img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+.moreSer .listt .itemm .right {
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}
+.moreSer .listt .itemm .right::after {
+  content: "";
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transform: rotate(45deg);
+  margin-top: 25rpx;
+}

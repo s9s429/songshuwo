@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 固定头部 -->
+  <view class="topHeader">
+    <!-- 头部 -->
+    <view class="header">
+      <image bindtap="goagent" class="userImage" src="../../images/headImg.png"></image>
+      <view class="inputCon">
+        <image class="inputImg" src="../../images/search.png"></image>
+        <input class="inputSty" />
+      </view>
+      <image class="gameImg" src="../../images/gameImg.png"></image>
+      <image class="email" src="../../images/message.png"></image>
+    </view>
+    <!-- 头部tab -->
+    <view class="{{isFiexTab ? 'headTab headTabFiex' : 'headTab'}}">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+        <view 
+          wx:for="{{selList}}" 
+          wx:key="id"
+          class="{{item.id == selId ? 'tabTxt active' : 'tabTxt'}}"
+          data-id="{{item.id}}"
+          bindtap="bingChangeTag">
+          {{item.title}}
+        </view>
+      </scroll-view>
+      <!-- 标签下滑动下划线（未完成） -->
+      <!-- <view class="slidSpan"></view> -->
+    </view>
+    <!-- 备用tab占位 -->
+    <view wx:if="{{isFiexTab}}" class="headTabFake"></view>
+  </view>
+  <!-- 中间swiper模块 -->
+  <swiper 
+    class="swpHei"
+    style="height: {{clientHeight + 'px'}};"
+    current="{{selId}}"
+    bindchange="swiperchange">
+    <!-- 直播 -->
+    <swiper-item>
+      <scroll-view class="scoView" scroll-y="true"
+        bindscrolltolower="scViewScrollTolower1">
+        <live id="live"></live>
+      </scroll-view>
+    </swiper-item>
+    <!-- 推荐 -->
+    <swiper-item>
+      <scroll-view class="scoView" scroll-y="true" 
+        refresher-enabled="true"
+        refresher-triggered="{{scRefreshLoading2}}"
+        bindrefresherrefresh="scViewRefresh2"
+        bindscrolltolower="scViewScrollTolower2">
+        <recommended bind:mathHeight="setSwipHeight" id="recommend"></recommended>
+      </scroll-view>
+    </swiper-item>
+    <!-- 热门 -->
+    <swiper-item>
+      <scroll-view class="scoView" scroll-y="true">
+        <image src="../../images/headImg.png"></image>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,47 @@
+/* pages/test/index.wxss */
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: coral;
+}
+.textBox {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: darkcyan;
+}
+.sw {
+  width: 100%;
+  height: 20rpx;
+}
+.sw1 {
+  background-color: darkcyan;
+}
+.sw2 {
+  background-color: darkgreen;
+}
+.sw3 {
+  background-color: rebeccapurple;
+}
+.hover {
+  background-color: gold;
+}
+.animation-element-wrapper {
+  display: flex;
+  width: 100%;
+  padding-top: 150rpx;
+  padding-bottom: 150rpx;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.animation-element {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #1AAD19;
+}
+.testImg {
+  height: 400rpx;
+  width: 750rpx;
+}

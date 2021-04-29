@@ -1,0 +1,7 @@
+<view class='container'>
+  <view class="masonry">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <image class="img" src='{{item.url}}' mode='widthFix'></image>
+    </view>
+  </view>
+</view> 

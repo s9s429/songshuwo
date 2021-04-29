@@ -1,0 +1,147 @@
+<view>
+  <!-- 头部tab -->
+  <view class="{{isFiexTab ? 'headTab headTabFiex' : 'headTab'}}">
+    <view 
+      wx:for="{{selList}}" 
+      wx:key="id"
+      class="{{item.id == selId ? 'tabTxt active' : 'tabTxt'}}"
+      data-id="{{item.id}}"
+      bindtap="bingChangeTag">
+      {{item.title}}
+    </view>
+    <!-- 标签下滑动下划线（未完成） -->
+    <!-- <view class="slidSpan"></view> -->
+  </view>
+  <!-- 备用tab占位 -->
+  <view wx:if="{{isFiexTab}}" class="headTabFake"></view>
+  <!-- swiper模块 -->
+  <swiper style="height: {{screenHei}}" current="{{selId}}" bindchange="swiperchange">
+    <swiper-item>
+      <scroll-view class="scvhe1" scroll-y="true" style="height: {{screenHei}};">
+        <view class="swip1">
+          <!-- 搜索框 -->
+          <view class="header">
+            <view class="inputCon">
+              <image class="inputImg" src="../../images/search.png"></image>
+              <input placeholder="搜索你感兴趣的频道" class="inputSty" placeholder-class="plcolor" />
+            </view>
+          </view>
+          <!-- 频道列表 -->
+          <view class="channelList">
+            <view class="channelType" wx:for="{{channelType}}" wx:key="index">
+              <image class="typeImg" src="{{item.img}}"></image>
+              <view class="typeTit">{{item.tit}}</view>
+            </view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 最近看过的频道 -->
+          <view class="channelRecord">
+            <view class="recordTit">最近看过的频道</view>
+            <scroll-view catchtouchmove="touchMove" class="scrollRecord" scroll-x="true">
+              <view class="recordList">
+                <view class="recordBox" wx:for="{{historyRecord}}" wx:key="index">
+                  <image class="bgImg" src="{{item.bgImg}}"></image>
+                  <image class="cenImg" src="{{item.img}}"></image>
+                  <view class="channelName">{{item.name}}</view>
+                  <view class="recordTime">{{item.time}}</view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 我订阅的频道 -->
+          <view class="subChannel">
+            <view class="hotTit">
+              <text>我订阅的频道</text>
+              <text class="checkAll">管理订阅2</text>
+            </view>
+            <!-- 频道视频列表 -->
+            <view class="subList">
+              <view class="subBox" wx:for="{{channelList}}" wx:key="index">
+                <view class="boxTit">
+                  <view class="leftTit">
+                    <view class="boxName">{{item.type}}</view>
+                    <view class="boxTime">{{item.time}}</view>
+                  </view>
+                  <view class="goChannel">{{item.buttonTet}}</view>
+                </view>
+                <view class="channelVideo">
+                  <!-- 盒子start -->
+                  <view class="videoBox" wx:for="{{item.videoList}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
+                    <view class="videoImgBox">
+                      <navigator url="/pages/play/play">
+                        <image lazy-load="true" class="imgBg" src="{{item2.img}}"></image>
+                      </navigator>
+                    </view>
+                    <view class="videoTitle">{{item2.tit}}</view>
+                  </view>
+                  <!-- 盒子end -->
+                </view>
+                <view class="bottomText">{{item.more}}</view>
+              </view>
+            </view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 热门频道 -->
+          <view class="hotChannel">
+            <view class="hotTit">
+              <text>热门频道</text>
+              <view class="hotRightIcon" bindtap="getRandomChannel">
+                <text>换一换</text><image class="hotIcon" src="../../images/tg7gh-y8g52.png"></image>
+              </view>
+            </view>
+            <!-- 频道列表 -->
+            <view class="channelList">
+              <view class="channelType" wx:for="{{hotChannel}}" wx:key="index">
+                <image class="typeImg" src="{{item.img}}"></image>
+                <view class="typeTit">{{item.tit}}</view>
+              </view>
+            </view>
+          </view>
+          <!-- 我订阅的频道 -->
+          <view class="subChannel">
+            <!-- 频道视频列表 -->
+            <view class="subList">
+              <view class="subBox" wx:for="{{channelList2}}" wx:key="index">
+                <view class="boxTit">
+                  <view class="leftTit">
+                    <view class="boxName">{{item.type}}</view>
+                    <view class="boxTime">{{item.time}}</view>
+                  </view>
+                  <view class="goChannel">{{item.buttonTet}}</view>
+                </view>
+                <view class="channelVideo">
+                  <!-- 盒子start -->
+                  <view class="videoBox" wx:for="{{item.videoList}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
+                    <view class="videoImgBox">
+                      <navigator url="/pages/play/play">
+                        <image lazy-load="true" class="imgBg" src="{{item2.img}}"></image>
+                      </navigator>
+                    </view>
+                    <view class="videoTitle">{{item2.tit}}</view>
+                  </view>
+                  <!-- 盒子end -->
+                </view>
+                <view class="bottomText">{{item.more}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="scvhe2" scroll-y="true" style="height: {{screenHei}};">
+        <!-- 分区列表 -->
+        <view class="channelArea">
+          <view class="channelType" wx:for="{{channelArea}}" wx:key="index">
+            <image class="typeImg" src="{{item.img}}"></image>
+            <view class="typeTit">{{item.tit}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

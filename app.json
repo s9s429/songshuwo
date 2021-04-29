@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/index",
+    "pages/header/index",
+    "pages/component/recommended/index",
+    "pages/play/play",
+    "pages/component/coverMsgList/index",
+    "pages/component/live/index",
+    "pages/channel/index",
+    "pages/dynamic/index",
+    "pages/members/index",
+    "pages/my/index",
+    "pages/agent/index"
+  ],
+  "entryPagePath": "pages/index/index",
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText": "空间",
+    "backgroundColor": "#F4F4F4",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 5000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#FF69B4",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/001.png",
+        "selectedIconPath": "images/001.png"
+      },
+      {
+        "pagePath": "pages/channel/index",
+        "text": "频道",
+        "iconPath": "images/002.png",
+        "selectedIconPath": "images/002.png"
+      },
+      {
+        "pagePath": "pages/dynamic/index",
+        "text": "动态",
+        "iconPath": "images/003.png",
+        "selectedIconPath": "images/003.png"
+      },
+      {
+        "pagePath": "pages/members/index",
+        "text": "会员",
+        "iconPath": "images/004.png",
+        "selectedIconPath": "images/004.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/005.png",
+        "selectedIconPath": "images/005.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+<view>
+  <!-- 头部tab -->
+  <view class="{{isFiexTab ? 'headTab headTabFiex' : 'headTab'}}">
+    <view 
+      wx:for="{{selList}}" 
+      wx:key="id"
+      class="{{item.id == selId ? 'tabTxt active' : 'tabTxt'}}"
+      data-id="{{item.id}}"
+      bindtap="bingChangeTag">
+      {{item.title}}
+    </view>
+    <!-- 标签下滑动下划线（未完成） -->
+    <!-- <view class="slidSpan"></view> -->
+  </view>
+  <!-- 备用tab占位 -->
+  <view wx:if="{{isFiexTab}}" class="headTabFake"></view>
+  <!-- swiper模块 -->
+  <swiper style="height: {{screenHei}};" current="{{selId}}" bindchange="swiperchange">
+    <swiper-item>
+      <scroll-view class="scview" scroll-y="true">
+        <view class="swip1">
+          <!-- 搜索框 -->
+          <view class="header">
+            <view class="inputCon">
+              <image class="inputImg" src="../../images/search.png"></image>
+              <input placeholder="查找精彩动态内容" class="inputSty" placeholder-class="plcolor" />
+            </view>
+          </view>
+          <view class="longTime">最常访问</view>
+          <!-- 频道列表 -->
+          <view class="channelList">
+            <scroll-view catchtouchmove="touchMove" scroll-x="true">
+              <view class="headList">
+                <!-- video列 -->
+                <block wx:for="{{channelType}}" wx:key="index">
+                  <view class="channelType">
+                    <view class="imgArea">
+                      <image class="typeImg" src="{{item.img}}"></image>
+                      <text wx:if="{{item.isActive}}" class="redPoint"></text>
+                    </view>
+                    <view class="typeTit">{{item.tit}}</view>
+                  </view>
+                </block>
+              </view>
+            </scroll-view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 最近看过的频道 -->
+          <view class="channelRecord">
+            <view class="hotTit">
+              <text>我的追番·追剧</text>
+              <text class="checkAll">全部</text>
+            </view>
+            <scroll-view catchtouchmove="touchMove" class="scrollRecord" scroll-x="true">
+              <view class="recordList">
+                <view class="recordBox" wx:for="{{animaList}}" wx:key="index">
+                  <image class="cenImg" src="{{item.img}}"></image>
+                  <view class="aniScount">{{item.scount}}</view>
+                  <view class="channelName">{{item.name}}</view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 动态列表 -->
+          <view class="dynamicList">
+            <block wx:for="{{dynamicList}}" wx:key="index">
+              <view class="dyBox">
+                <view class="topBox">
+                  <view class="topleft">
+                    <image class="headimg" src="{{item.headimg}}"></image>
+                  </view>
+                  <view class="topleft2">
+                    <view class="atu">{{item.upName}}</view>
+                    <view class="time">{{item.time}} · 投稿了视频</view>
+                  </view>
+                </view>
+                <view class="conBox">
+                  <view class="contentBox">{{item.content}}</view>
+                  <image class="conImg" src="{{item.cover}}"></image>
+                  <view class="conTit">{{item.tit}}</view>
+                </view>
+                <view class="conBot">
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto01.png"></image>
+                    <text class="tagTet">{{item.forward}}</text>
+                  </view>
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto02.png"></image>
+                    <text class="tagTet">{{item.comment}}</text>
+                  </view>
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto03.png"></image>
+                    <text class="tagTet">{{item.like}}</text>
+                  </view>
+                </view>
+              </view>
+              <!-- 黑色过渡线 -->
+              <view class="trans"></view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="scview" scroll-y="true">
+        <view class="swip2">
+          <!-- 搜索框 -->
+          <view class="header">
+            <view class="inputCon">
+              <image class="inputImg" src="../../images/search.png"></image>
+              <input placeholder="查找精彩动态内容" class="inputSty" placeholder-class="plcolor" />
+            </view>
+          </view>
+          <!-- 频道列表 -->
+          <view class="channelList">
+            <scroll-view catchtouchmove="touchMove" scroll-x="true">
+              <view class="headList2">
+                <!-- live列 -->
+                <block wx:for="{{liveList}}" wx:key="index">
+                  <view class="channelType">
+                    <view class="imgArea">
+                      <view class="{{item.isLive ? 'pinkBorder' : ''}}">
+                        <image class="typeImg" src="{{item.img}}"></image>
+                      </view>
+                      <view class="liveIcon"><image class="iconimg" src="../../images/liveIcon02.png"></image>直播中</view>
+                      
+                    </view>
+                    <view class="typeTit">{{item.tit}}</view>
+                  </view>
+                </block>
+                <!-- 分割线 -->
+                <view class="stline" wx:if="{{liveList.length != 0}}">
+                  <view class="seline"></view>
+                </view>
+                <!-- video列 -->
+                <block wx:for="{{channelType}}" wx:key="index">
+                  <view class="channelType">
+                    <view class="imgArea">
+                      <image class="typeImg" src="{{item.img}}"></image>
+                      <text wx:if="{{item.isActive}}" class="redPoint"></text>
+                    </view>
+                    <view class="typeTit">{{item.tit}}</view>
+                  </view>
+                </block>
+              </view>
+            </scroll-view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 最近看过的频道 -->
+          <view class="channelRecord">
+            <view class="recordTit">话题</view>
+            <view class="topicList">
+              <view class="topic" wx:for="{{topicList}}" wx:key="index">
+                <view class="topicLeft">
+                  <image class="topicon" src="../../images/huatiicon.png"></image>
+                  <text class="topiconTet">{{item.type}}</text>
+                </view>
+                <text class="topicTit">{{item.tit}}</text>
+              </view>
+              <view class="topic">
+                <text class="topicMore">查看更多</text>
+              </view>
+            </view>
+          </view>
+          <!-- 黑色过渡线 -->
+          <view class="trans"></view>
+          <!-- 动态列表 -->
+          <view class="dynamicList">
+            <block wx:for="{{dynamicList2}}" wx:key="index">
+              <view class="dyBox">
+                <view class="topBox">
+                  <view class="topleft">
+                    <image class="headimg" src="{{item.headimg}}"></image>
+                  </view>
+                  <view class="topleft2">
+                    <view class="atu">{{item.upName}}</view>
+                    <view class="time">{{item.time}} · 投稿了视频</view>
+                  </view>
+                </view>
+                <view class="conBox">
+                  <view class="contentBox">{{item.content}}</view>
+                  <image class="conImg" src="{{item.cover}}"></image>
+                  <view class="conTit">{{item.tit}}</view>
+                </view>
+                <view class="conBot">
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto01.png"></image>
+                    <text class="tagTet">{{item.forward}}</text>
+                  </view>
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto02.png"></image>
+                    <text class="tagTet">{{item.comment}}</text>
+                  </view>
+                  <view class="contag">
+                    <image class="tagIcon" src="../../images/bto03.png"></image>
+                    <text class="tagTet">{{item.like}}</text>
+                  </view>
+                </view>
+              </view>
+              <!-- 黑色过渡线 -->
+              <view class="trans"></view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <!-- </scroll-view> -->
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "recommended": "../component/recommended/index",
+    "live": "../component/live/index"
+  },
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "首页"
+}
